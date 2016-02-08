@@ -13,6 +13,8 @@ trigger createChildMatchedResult on Enquiry_Name__c (after insert , after update
     }
 
 
+//ttttt Ravi Teja
+
  List<Matched_Result__c> matchedResults = new List<Matched_Result__c>();
  
          for (Enquiry_Name__c newEnquiry: Trigger.New) {
@@ -24,7 +26,7 @@ trigger createChildMatchedResult on Enquiry_Name__c (after insert , after update
                      Matched_Result__c results = new Matched_Result__c();
                      results.Name_of_Enquiry__c = newEnquiry.Enquiry_Name__c;
                      results.Flat__c = flat.Id;
-                 
+                 	
                     results.Name_of_Apartment__c = flat.Name__c;
                     
                      results.Enquiry__c = newEnquiry.Id;
